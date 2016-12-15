@@ -221,7 +221,7 @@ gulp.task('sprites', () => {
 });
 
 gulp.task('icons', function() {
-    return gulp.src('app/images/*.svg')
+    return gulp.src('app/images/svg/*.svg')
         .pipe(svgSymbols({
             svgId: 'icon-%f',
             className: '.icon-%f',

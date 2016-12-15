@@ -2,46 +2,407 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная</title>
-    <!--meta(name='description' content='')-->
-    <!--meta(name='keywords' content='')-->
-    <!-- build:css styles/main.css-->
-    <link href="styles/main.css" rel="stylesheet">
-    <!-- endbuild-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Главная</title>
+	<!--meta(name='description' content='')-->
+	<!--meta(name='keywords' content='')-->
+	<!-- build:css styles/main.css-->
+	<link href="styles/main.css" rel="stylesheet">
+	<!-- endbuild-->
 </head>
 
 <body>
-    <div class="page-wrapper">
-        <!-- begin header -->
-        <header class="header">
-        </header>
-        <!-- end header -->
-        <!-- begin page-content -->
-        <div id="page-content">
+<div class="page-wrapper">
+	<!-- begin header -->
+	<header class="header">
+		<div class="container">
+			<a href="" class="nav-trigger-wrap">
+				<span class="nav-trigger"></span>
+			</a>
+			<div class="logo"><img src="images/logo.png" alt=""></div>
+			<div class="header-body">
+				<div class="top">
+					<div class="phone-block">
+						<svg role="img" class="icon-smartphone" aria-hidden="true">
+							<use xlink:href="images/sprites/svg-symbols.svg#smartphone"></use>
+						</svg>
+						<span>8 (8452) 74 44 05</span>
+					</div>
 
-        </div>
-        <!-- end page-content -->
-        <!-- begin footer -->
-        <footer class="footer">
+					<div class="header-buttons">
+						<a href="#popup-callback" class="btn fancybox-modal"><span>вам перезвонить?</span>
+							<svg role="img" class="icon-phone-call" aria-hidden="true">
+								<use xlink:href="images/sprites/svg-symbols.svg#phone-call"></use>
+							</svg>
+						</a>
 
-        </footer>
-        <!-- end footer -->
-    </div>
-    <!-- build:js scripts/jquery.min.js-->
-    <!-- bower:js-->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower-->
-    <!-- endbuild-->
-    <!-- build:js scripts/libs.js-->
-    <script src="scripts/slick.min.js"></script>
-    <script src="scripts/jquery.fancybox.pack.js"></script>
-    <!-- endbuild-->
-    <!-- build:js scripts/main.js-->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild-->
+						<a href="#popup-callback" class="btn btn-white fancybox-modal"><span>вам перезвонить?</span>
+							<svg role="img" class="calculator" aria-hidden="true">
+								<use xlink:href="images/sprites/svg-symbols.svg#calculator"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<nav class="header-nav">
+					<ul>
+						<li><a href="">О компании</a></li>
+						<li><a href="">Все услуги</a></li>
+						<li><a href="">Наши представители</a></li>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Спецпредложения</a></li>
+						<li><a href="">FAQ</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+	</header>
+	<!-- end header -->
+	<!-- begin page-content -->
+	<div id="page-content">
+
+		<!-- start mega-slider -->
+		<section class="mega-slider container">
+			<div class="wrapper">
+				<div class="slide" style="background: url(images/slider.jpg) no-repeat center / cover">
+					<div class="slide-content">
+						<h1>Электронная подпись<br>
+							в день обращения
+							<span>от 1200 руб</span></h1>
+						<a href="" class="btn btn-white"><span>Получить</span>
+							<svg role="img" class="icon-pen" aria-hidden="true">
+								<use xlink:href="images/sprites/svg-symbols.svg#pen"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end mega-slider -->
+		
+		<!-- start about-signature -->
+		   <section class="about-signature">
+			   <div class="container">
+				   <aside>
+					   <h2 class="heading"><span>Электронная подпись</span></h2>
+					   <div class="content">
+						   <p>– это полноценная замена рукописной подписи, которая имеет
+							   равную юридическую силу. ЭЦП подтверждает юридическую значимость действий организаций и частных лиц. При наличии ЭЦП можно проводить финансовые транзакции, участвовать в электронных торгах, получать государственные услуги и защищать
+							   интеллектуальную собственность.</p>
+						   <div class="caption">Согласно закона №63-ФЗ «Об электронной подписи»</div>
+					   </div>
+				   </aside>
+				   <div class="about-signature-image">
+					   <img src="images/signature-img.jpg" alt="">
+				   </div>
+			   </div>
+		   </section>
+		<!-- end about-signature -->
+
+		<!-- start features-and-types -->
+		   <div class="features-and-types">
+			   <div class="tabs js-tabs">
+				   <a href="" class="tab js-tab">
+					   <div class="wrap">
+						   <div class="tab-content">Возможности владельцев электронной подписи</div>
+					   </div>
+				   </a>
+
+				   <a href="" class="tab js-tab">
+					   <div class="wrap">
+						   <div class="tab-content">Виды электронной подписи</div>
+					   </div>
+				   </a>
+			   </div>
+
+			   <div class="double-slider">
+				   <div class="slide features">
+					   <div class="container">
+						   <div class="features-row row">
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-browser" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#browser"></use>
+									   </svg>
+									   <p>Защита документов
+										   от подделки</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-shield" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#shield"></use>
+									   </svg>
+									   <p>Защита документов
+										   от подделки</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-file" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#file"></use>
+									   </svg>
+									   <p>Обеспечение
+										   конфиденциальности
+										   информации</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-police" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#police"></use>
+									   </svg>
+									   <p>Оказание
+										   государственных функций
+										   и муниципальных услуг</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-police" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#copyright"></use>
+									   </svg>
+									   <p>Оказание
+										   государственных функций
+										   и муниципальных услуг</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-law-book" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#law-book"></use>
+									   </svg>
+									   <p>Оказание
+										   государственных функций
+										   и муниципальных услуг</p>
+								   </div>
+							   </div>
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-handshake" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#handshake"></use>
+									   </svg>
+									   <p>Оказание
+										   государственных функций
+										   и муниципальных услуг</p>
+								   </div>
+							   </div>
+
+							   <div class="feature">
+								   <div class="feature-icon">
+									   <svg role="img" class="icon-siren" aria-hidden="true">
+										   <use xlink:href="images/sprites/svg-symbols.svg#siren"></use>
+									   </svg>
+									   <p>Исполнение государсвенных
+										   и муниципальных заказов</p>
+								   </div>
+							   </div>
+						   </div>
+					   </div>
+				   </div>
+				   <div class="slide signature-types">
+					   <div class="container">
+						   <div class="row">
+							   <div class="col-md-4 col-sm-4 col-xs-12">
+								   <div class="signature-type">
+									   <div class="icon">
+										   <img src="images/flash1.png" alt="Простая электронная подпись">
+									   </div>
+									   <h4>Простая электронная подпись</h4>
+									   <ul class="custom-list">
+										   <li>/  Нужна пользователям Единого портала госуслуг</li>
+										   <li>/  Используется для документооборота</li>
+										   <li>/  Позволит подтвердить авторство</li>
+										   <li>/  Не гарантирует неизменность документа после его подписания</li>
+										   <li>/  Не обеспечивают юридическую значимость.</li>
+									   </ul>
+								   </div>
+							   </div>
+							   <div class="col-md-4 col-sm-4 col-xs-12">
+								   <div class="signature-type">
+									   <div class="icon">
+										   <img src="images/flash2.png" alt="Неквалифицированная электронная подпись">
+									   </div>
+									   <h4>Неквалифицированная электронная подпись</h4>
+									   <ul class="custom-list">
+										   <li>/  Определит автора подписанного документа</li>
+										   <li>/  Докажет неизменность информации</li>
+										   <li>/  Защитит информацию благодаря криптографическим алгоритмам</li>
+										   <li>/  Нужна для внутреннего документооборота</li>
+										   <li>/  Используется для отправки документов контрагентам по e-mail</li>
+										   <li>/  Предназначена для участия в электронных торгах</li>
+									   </ul>
+								   </div>
+							   </div>
+							   <div class="col-md-4 col-sm-4 col-xs-12">
+								   <div class="signature-type">
+									   <div class="icon">
+										   <img src="images/flash2.png" alt="Квалифицированная электронная подпись">
+									   </div>
+									   <h4>Квалифицированная электронная подпись</h4>
+									   <ul class="custom-list">
+										   <li>/  Определит автора подписанного документа</li>
+										   <li>/  Докажет неизменность информации</li>
+										   <li>/  Защитит информацию благодаря криптографическим алгоритмам</li>
+										   <li>/  Нужна для внутреннего документооборота</li>
+										   <li>/  Выдается в удостоверяющем центре, аккредитованном Минкомсвязи России ПО для работы с КЭП должно быть сертифицировано ФСБ</li>
+										   <li>/  Наделяет документы полной юридической силой</li>
+										   <li>/  Соответствует требованиям о защите конфиденциальной информации</li>
+										   <li>/  Используется для сдачи отчетности в контролирующие органы госвласти</li>
+										   <li>/  Позволяет участие в электронных торгах</li>
+									   </ul>
+								   </div>
+							   </div>
+						   </div>
+					   </div>
+				   </div>
+			   </div>
+		   </div>
+		<!-- end features-and-types -->
+
+		<!-- start consult-offer -->
+		   <section class="consult-offer">
+			   <div class="container">
+				   <div class="consult-offer-top">
+					   <h2 class="heading heading-bg-white">Получить консультацию</h2>
+					   <div class="caption">Помочь Вам разобраться, какая именно ЭП нужна именно Вашей организации? Оставьте контакты - мы перезвоним</div>
+				   </div>
+				   <form class="consult-offer-form">
+					   <div class="form-group form-group-inline">
+						   <span>Имя</span>
+						   <div class="field-wrap field-wrap-name">
+							   <input type="text" class="field">
+							   <svg role="img" class="icon-user" aria-hidden="true">
+								   <use xlink:href="images/sprites/svg-symbols.svg#user"></use>
+							   </svg>
+						   </div>
+					   </div>
+					   <div class="form-group form-group-inline">
+						   <span>Телефон или email</span>
+						   <div class="field-wrap field-wrap-name">
+							   <input type="text" class="field">
+							   <svg role="img" class="icon-smartphone" aria-hidden="true">
+								   <use xlink:href="images/sprites/svg-symbols.svg#smartphone"></use>
+							   </svg>
+						   </div>
+					   </div>
+					   <button class="btn btn-white"><span>получить консультацию</span></button>
+				   </form>
+			   </div>
+		   </section>
+		<!-- end consult-offer -->
+
+		<!-- start signature-steps -->
+		   <section class="signature-steps">
+				<div class="container">
+					<h2 class="heading">Электронную подпись получить легко:</h2>
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="signature-step">
+								<div class="step-count">
+									<span>1</span>
+									<div>шаг</div>
+									<svg role="img" class="icon-operator" aria-hidden="true">
+										<use xlink:href="images/sprites/svg-symbols.svg#operator"></use>
+									</svg>
+								</div>
+								Выбираете нужный сертификат ЭП, оставляете заявку на сайте или звоните менеджеру
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="signature-step">
+								<div class="step-count">
+									<span>2</span>
+									<div>шаг</div>
+									<svg role="img" class="icon-point-of-service" aria-hidden="true">
+										<use xlink:href="images/sprites/svg-symbols.svg#point-of-service"></use>
+									</svg>
+								</div>
+								Подтвердив заявку, оплачиваете счет
+								удобным способом.
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="signature-step">
+								<div class="step-count">
+									<span>3</span>
+									<div>шаг</div>
+									<svg role="img" class="icon-attach" aria-hidden="true">
+										<use xlink:href="images/sprites/svg-symbols.svg#attach"></use>
+									</svg>
+								</div>
+								Передаете своему персональному менеджеру комплект документов.
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="signature-step">
+								<div class="step-count">
+									<span>4</span>
+									<div>шаг</div>
+									<svg role="img" class="icon-diploma" aria-hidden="true">
+										<use xlink:href="images/sprites/svg-symbols.svg#diploma"></use>
+									</svg>
+								</div>
+								Получаете сертификат электронной подписи в нашем сервисном центре.
+							</div>
+						</div>
+					</div>
+				</div>
+		   </section>
+		<!-- end signature-steps -->
+
+		<!-- start order -->
+		   <div class="order">
+			   <div class="container">
+				   <h2 class="heading order-bg-white">Оставьте заявку на нужный сертификат:</h2>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="order-block">
+								<h3>Электронная подпись для ЕГАИС</h3>
+								<ul>
+									<li>/  подбор оборудования</li>
+									<li>/  выдача ключей ЭЦП на JaCarta</li>
+									<li>/  установка и настройка всех необходимых программ</li>
+									<li>/  консультации и обучение</li>
+									<li>/  абонентское сопровождение</li>
+								</ul>
+								<h4>ЭП для системы ЕГАИС с носителем</h4>
+								<div class="order-block-bottom">
+									<div class="row">
+										<a href="" class="btn btn-gray"><span>Узнать больше</span></a>
+										<a href="" class="btn"><span>Заказать</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			   </div>
+		   </div>
+		<!-- end order -->
+	</div>
+	<!-- end page-content -->
+	<!-- begin footer -->
+	<footer class="footer">
+
+	</footer>
+	<!-- end footer -->
+</div>
+<!-- build:js scripts/jquery.min.js-->
+<!-- bower:js-->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower-->
+<!-- endbuild-->
+<!-- build:js scripts/libs.js-->
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/jquery.fancybox.pack.js"></script>
+<script src="scripts/svg4everybody.min.js"></script>
+<!-- endbuild-->
+<!-- build:js scripts/main.js-->
+<script src="scripts/main.js"></script>
+<!-- endbuild-->
 </body>
 
 </html>
