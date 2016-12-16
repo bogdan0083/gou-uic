@@ -5,7 +5,7 @@ html
     box-sizing inherit
 
 body
-    color black
+    color #333
     font-size 1rem
     font-family 'Helvetica Neue Cyr', sans-serif
     font-weight 400
@@ -51,12 +51,13 @@ img
 .nav-trigger-wrap
     float: left
     display: block
+    margin-top: 14px
     +above($screen-sm)
         display: none
 
 .nav-trigger
     margin: 0 auto
-    hamburger-generator(18px, 2px, 4px)
+    hamburger-generator(22px, 3px, 4px)
     text-align center
     margin-top 15px
     position relative
@@ -68,6 +69,8 @@ img
 
 .page-wrapper
     transition all 0.3s
+    position: relative
+    overflow: hidden
     &.active
         transform translateX(200px)
         
@@ -76,34 +79,58 @@ img
     +above($screen-sm)
         padding: 0 15px
 
-//.custom-select
-//    position relative
-//    height 34px
-//    margin-bottom 6px
-//    padding 0
-//    &:after
-//        content ''
-//        position absolute
-//        sprite($arrow_down)
-//        right 1px
-//        top 0
-//        pointer-events none
-//    select
-//        display: inline-block;
-//        width 100%
-//        padding: 8px 8px 3px 15px;
-//        margin: 0;
-//        font: inherit;
-//        outline:none; /* remove focus ring from Webkit */
-//        line-height: 1.2;
-//        background: transparent;
-//        color: black;
-//        border:0;
-//}
+
+.heading
+    scandal()
+
+.btn
+    height: 40px
+    text-decoration: none
+    background-color: $blue
+    display: inline-block
+    color white
+    padding 0 14px
+    line-height: 39px
+    text-transform: uppercase
+    position: relative
+    &:hover
+        span
+            color white
+        &:before
+            opacity: 1
+        > svg
+            fill white
+    &:before 
+        content ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background linear-gradient(to bottom, #55bbe6 0%, #55bbe6 50%, #4dabd2 50%, #4dabd2 100%)
+        transition opacity 0.3s
+        opacity: 0
+    svg
+        vertical-align: middle
+        margin-left: 10px
+        z-index: 1
+        position: relative
+    span
+        position: relative
+        transition color 0.3s
+        display: inline-block
+        vertical-align: middle
+        line-height: 1
+    &-white
+        background-color: white
+        color $blue
+    &-font-small
+        font-size: 12px
+        font-weight: 700
 
 .mobile-menu
-    background-color white
-    color black
+    background-color $blue
+    color white
     width 200px
     padding 20px
     position fixed
@@ -123,7 +150,7 @@ img
         text-decoration none
         display block
         margin 10px 0
-        font-size 1.3rem
+        font-size 1rem
         &:first-child
             margin-top 0
     span
@@ -153,6 +180,9 @@ img
 .animated
     animation-fill-mode both
 
+svg {
+    transition fill 0.3s
+}
 .icon-attach {
     width: 32em;
     height: 32em;
@@ -162,8 +192,9 @@ img
     height: 32.053em;
 }
 .icon-calculator {
-    width: 32em;
-    height: 32em;
+    width: 20px;
+    height: 20px;
+    fill: #134c8a;
 }
 .icon-copyright {
     width: 18.452em;
@@ -198,12 +229,13 @@ img
     height: 32em;
 }
 .icon-pen {
-    width: 32em;
-    height: 32em;
+    width: 20px;
+    height: 20px;
 }
 .icon-phone-call {
-    width: 32em;
-    height: 32em;
+    width: 20px;
+    height: 20px;
+    fill: white
 }
 .icon-point-of-service {
     width: 3.75em;
@@ -226,8 +258,10 @@ img
     height: 32em;
 }
 .icon-smartphone {
-    width: 32em;
-    height: 32em;
+    width: 20px;
+    height: 20px;
+    fill: #2b5f8e;
+    vertical-align: middle
 }
 .icon-user {
     width: 32em;

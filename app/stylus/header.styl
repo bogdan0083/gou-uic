@@ -1,3 +1,56 @@
 .header
-  margin-right: 10px
-  margin-top: 10px
+  background-color: #f3f3f3
+  min-height: 128px
+  padding 10px 0
+  text-align: center
+  .phone-block
+    margin-top: 10px
+    margin-bottom: 10px
+  .logo
+    +above($screen-sm)
+      float: left
+      margin-right 20px
+    +above($screen-md)
+      margin-right: 48px
+  .header-body
+    +above($screen-sm)
+      margin-left: 200px
+    +above($screen-md)
+      margin-left: 230px
+  .top
+    clearfix()
+  .phone-block
+    +above($screen-sm)
+      float: left
+  .header-buttons
+    +above($screen-sm)
+      float: right
+  .btn-white
+    +above($screen-md)
+      margin-left: 27px
+  .header-nav
+    ul
+      padding: 0
+      margin: 0
+      list-style none
+      text-align: justify
+      li
+        display: inline-block
+        text-align: center
+        a, span
+          display: block
+          font-weight: 700
+          text-transform: uppercase
+          font-size: 0.85rem
+          transition all 0.3s
+          text-decoration: none
+        &:hover, span
+          text-decoration: underline
+          color #34ade1
+      &:after
+        content ''
+        display: inline-block
+        text-align: justify
+        width: 100%
+  +above($screen-sm)
+    text-align: left

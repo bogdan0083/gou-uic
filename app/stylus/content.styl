@@ -1,0 +1,60 @@
+.phone-block
+	font-size 18px
+	svg
+		text-align: bottom
+
+.mega-slider
+	height: 474px
+	overflow: hidden
+	position: relative
+	margin-top: 50px
+	padding: 0
+	color white
+	.slide
+		position: relative
+		padding-top: 60px
+		+above($screen-sm)
+			padding-top: 40px
+		&:before
+			content ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background: url(../images/mask.png) no-repeat center / 100% 100%
+			display: block
+			z-index: 1
+	.container, .slick-slide, .slick-track, .slick-list, .wrapper
+		height: 100%
+	.slide-content
+		background: url(../images/bloat.png) no-repeat center / 100% 100%
+		padding 10px
+		max-width 340px
+		margin: 0 auto
+		padding-top: 100px
+		padding-bottom: 120px
+		position: relative
+		z-index: 3
+		text-align: center
+		+above($screen-sm)
+			max-width 486px
+			padding 60px
+			text-align: left
+			min-height: 400px
+			margin-left: 50px
+			padding-top: 80px
+			padding-left: 90px
+		h1
+			font-size: 1.4rem
+			font-weight: 200
+			text-transform: uppercase
+			line-height: 1.4
+			span
+				font-weight: 500
+			+above($screen-sm)
+				font-size 1.8rem
+				line-height: 1.5
+		.btn
+			+above($screen-sm)
+				float: right
