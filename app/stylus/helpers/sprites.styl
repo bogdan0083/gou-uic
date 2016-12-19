@@ -1,0 +1,169 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$clock_name = 'clock';
+$clock_x = 32px;
+$clock_y = 0px;
+$clock_offset_x = -32px;
+$clock_offset_y = 0px;
+$clock_width = 25px;
+$clock_height = 25px;
+$clock_total_width = 110px;
+$clock_total_height = 79px;
+$clock_image = '../images/sprites/sprites.png';
+$clock = 32px 0px -32px 0px 25px 25px 110px 79px '../images/sprites/sprites.png' 'clock';
+$fb_name = 'fb';
+$fb_x = 62px;
+$fb_y = 27px;
+$fb_offset_x = -62px;
+$fb_offset_y = -27px;
+$fb_width = 21px;
+$fb_height = 22px;
+$fb_total_width = 110px;
+$fb_total_height = 79px;
+$fb_image = '../images/sprites/sprites.png';
+$fb = 62px 27px -62px -27px 21px 22px 110px 79px '../images/sprites/sprites.png' 'fb';
+$g_name = 'g';
+$g_x = 24px;
+$g_y = 30px;
+$g_offset_x = -24px;
+$g_offset_y = -30px;
+$g_width = 22px;
+$g_height = 22px;
+$g_total_width = 110px;
+$g_total_height = 79px;
+$g_image = '../images/sprites/sprites.png';
+$g = 24px 30px -24px -30px 22px 22px 110px 79px '../images/sprites/sprites.png' 'g';
+$house_name = 'house';
+$house_x = 0px;
+$house_y = 0px;
+$house_offset_x = 0px;
+$house_offset_y = 0px;
+$house_width = 27px;
+$house_height = 25px;
+$house_total_width = 110px;
+$house_total_height = 79px;
+$house_image = '../images/sprites/sprites.png';
+$house = 0px 0px 0px 0px 27px 25px 110px 79px '../images/sprites/sprites.png' 'house';
+$ok_name = 'ok';
+$ok_x = 89px;
+$ok_y = 0px;
+$ok_offset_x = -89px;
+$ok_offset_y = 0px;
+$ok_width = 21px;
+$ok_height = 22px;
+$ok_total_width = 110px;
+$ok_total_height = 79px;
+$ok_image = '../images/sprites/sprites.png';
+$ok = 89px 0px -89px 0px 21px 22px 110px 79px '../images/sprites/sprites.png' 'ok';
+$phone_name = 'phone';
+$phone_x = 0px;
+$phone_y = 30px;
+$phone_offset_x = 0px;
+$phone_offset_y = -30px;
+$phone_width = 19px;
+$phone_height = 30px;
+$phone_total_width = 110px;
+$phone_total_height = 79px;
+$phone_image = '../images/sprites/sprites.png';
+$phone = 0px 30px 0px -30px 19px 30px 110px 79px '../images/sprites/sprites.png' 'phone';
+$ruble_name = 'ruble';
+$ruble_x = 0px;
+$ruble_y = 65px;
+$ruble_offset_x = 0px;
+$ruble_offset_y = -65px;
+$ruble_width = 10px;
+$ruble_height = 14px;
+$ruble_total_width = 110px;
+$ruble_total_height = 79px;
+$ruble_image = '../images/sprites/sprites.png';
+$ruble = 0px 65px 0px -65px 10px 14px 110px 79px '../images/sprites/sprites.png' 'ruble';
+$twitter_name = 'twitter';
+$twitter_x = 62px;
+$twitter_y = 0px;
+$twitter_offset_x = -62px;
+$twitter_offset_y = 0px;
+$twitter_width = 22px;
+$twitter_height = 22px;
+$twitter_total_width = 110px;
+$twitter_total_height = 79px;
+$twitter_image = '../images/sprites/sprites.png';
+$twitter = 62px 0px -62px 0px 22px 22px 110px 79px '../images/sprites/sprites.png' 'twitter';
+$vk_name = 'vk';
+$vk_x = 89px;
+$vk_y = 27px;
+$vk_offset_x = -89px;
+$vk_offset_y = -27px;
+$vk_width = 21px;
+$vk_height = 22px;
+$vk_total_width = 110px;
+$vk_total_height = 79px;
+$vk_image = '../images/sprites/sprites.png';
+$vk = 89px 27px -89px -27px 21px 22px 110px 79px '../images/sprites/sprites.png' 'vk';
+$spritesheet_width = 110px;
+$spritesheet_height = 79px;
+$spritesheet_image = '../images/sprites/sprites.png';
+$spritesheet_sprites = $clock $fb $g $house $ok $phone $ruble $twitter $vk;
+$spritesheet = 110px 79px '../images/sprites/sprites.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
