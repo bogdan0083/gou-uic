@@ -29,7 +29,38 @@
 			display: block
 			color #999
 			margin-top: 4px
+	.footer-right
+		+above($screen-sm)
+			float: right
+			text-align: right
+			margin-top: 10px
+			.social
+				margin-bottom: 14px
+	.footer-nav
+		vertical-align: middle
+		display: inline-block
+		width: 320px
+		margin-left: 80px
+		ul
+			padding: 0
+			margin: 0
+			list-style none
+			li
+				display: inline-block
+				width: 50%
+				margin-right: -3px
+				vertical-align: top
+				margin-bottom 9px
+				color #999
+				a
+					text-decoration: none
+					transition all 0.3s
+					&:hover
+						color $blue
 	.made-by
+		margin-top: 10px
+		+above($screen-sm)
+			margin-top: 0
 		a
 			color #1e5587
 			text-transform: uppercase
