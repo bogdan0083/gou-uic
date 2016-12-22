@@ -524,6 +524,24 @@
 				right 0
 				bottom 0
 
+.map-info-block
+	margin 30px 0 30px 20px
+	padding-left 50px
+	position: relative
+	.icon-wrap
+		position: absolute
+		left: 0
+		height: 100%
+		width: 25px
+		svg
+			position: absolute
+			margin auto
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			fill: white
+
 .map-wrapper
 	position: relative
 	height: 526px
@@ -537,22 +555,6 @@
 		vertical-align: middle
 		.icon
 			margin: 0
-	.map-info-block
-		margin 30px 0 30px 20px
-		padding-left 50px
-		position: relative
-		.icon-wrap
-			position: absolute
-			left: 0
-			height: 100%
-			width: 25px
-			.icon
-				position: absolute
-				margin auto
-				top: 0
-				bottom: 0
-				left: 0
-				right: 0
 	.map-content
 		margin: 0 auto
 		position: relative
@@ -605,6 +607,9 @@
 		text-decoration: none
 		transition all 0.3s
 		margin-right: 12px
+		margin-left: 12px
+		&:first-child
+			margin-left: 0
 		&:hover
 			color $blue
 	span
@@ -768,3 +773,388 @@
 .ceo-block
 	padding 20px 0 30px
 	line-height: 1.5
+
+button:focus
+	outline none
+
+.arr
+	background-color: transparent
+	padding: 0
+	border none
+	&:hover svg
+		fill #1da7e0
+
+.special-offers
+	+above($screen-sm)
+		height: 500px
+		background: url("../images/offer.jpg") no-repeat center / cover
+		position: relative
+		margin-bottom: 180px
+
+.custom-slider-container
+	+above($screen-sm)
+		position: absolute
+		max-width: 100%
+		width: 100%
+		bottom -119px
+		left: 0
+.custom-slider
+	max-width: 1030px
+	margin: 0 auto
+	clearfix()
+	.slide
+		color white
+		background-color: $blue
+		overflow: hidden
+		background: none
+		line-height: 1.5
+		h2
+			text-transform: uppercase
+			font-size: 1.3rem
+			font-weight: 400
+			margin-top: 0
+			min-height: 55px
+			margin-bottom: 0
+		p
+			font-size 1rem
+			text-transform: uppercase
+			padding-top: 0
+		.arrows
+			display: none
+		.inner
+			padding 20px
+		+between(0, $screen-sm)
+			background: $blue !important
+			margin 10px 0
+			float: none !important
+			width: 100%
+			text-align: center
+	+above($screen-sm)
+		.arrows
+			display: block
+		.slide
+			width: 5%
+			float: left
+			background-color: $gray
+			transition width 1s
+			cursor pointer
+			position: relative
+			background-size cover
+			background-repeat: no-repeat
+			height: 238px
+			.arr
+				margin-left: 8px
+			.arrows
+				display: block
+				float: right
+				margin-top: 8px
+			h2
+				font-size: 1.7rem
+				min-height: 70px
+			p
+				font-size: 1.2rem
+				color #c6c6c6
+				min-height: 45px
+			&:before
+				content ''
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				background-color: #ccc
+				transition all 0.3s
+				position: absolute
+				opacity: 0.8
+			&.js-active
+				cursor normal
+				width: 80%
+				background-color: $blue
+				&:before
+					background-color: $blue
+				.inner
+					opacity: 1
+			.inner
+				min-width 900px
+				opacity: 0
+				transition opacity 0.3s
+				position: relative
+				z-index: 2
+
+.service-article, .news-article
+	line-height: 1.5
+	padding-top: 30px
+	overflow: hidden
+	padding-bottom: 40px
+	+above($screen-sm)
+		padding-top: 60px
+	.content a
+		color #1ca8e1
+	&-img
+		display: block
+		margin: 0 auto 10px
+		+above($screen-sm)
+			float: left
+			margin-right: 30px
+			margin-bottom: 16px
+	h2:first-child
+		font-size 1.714rem
+		font-weight: 400
+		color $blue
+		margin-top: 0
+		text-transform: uppercase
+	.date
+		font-size 1.714rem
+		text-transform: uppercase
+		line-height: 1
+		margin-bottom: 20px
+		margin-top: -10px
+		scandal()
+		color $blue
+		span
+			font-size: 2.5rem
+.contact
+	color white
+	padding 20px 0
+	background: url("../images/contact-bg.jpg") no-repeat center / cover
+	text-align: center
+	+above($screen-sm)
+		padding-bottom: 40px
+	h2
+		scandal()
+		text-transform: uppercase
+		line-height: 1.3
+	.group
+		+above($screen-sm)
+			margin-top: 40px
+	.map-info-block
+		display: table
+		vertical-align: middle
+		margin 20px auto
+		text-align: left
+		min-width: 194px
+		+above($screen-sm)
+			font-size 1.286rem
+			display: inline-block
+			padding-left: 90px
+			width: 290px
+			min-width 0
+			text-align: left
+			line-height: 1.5
+			margin 30px 10px
+			svg
+				width: 63px
+				fill #1ca8e1
+				height: 64px
+		+above($screen-md)
+			margin 10px 20px
+.contact-group
+	padding-top: 30px
+	padding-bottom: 40px
+	text-align: center
+	h3
+		font-size 1.286rem
+		color $blue
+		line-height: 1.2
+		margin-top: 0
+		font-weight: 400
+	.btn
+		margin-top: 10px
+
+.contact-form
+	+above($screen-sm)
+		margin-right: 40px
+		float: left
+		text-align: left
+		.btn
+			margin-top 40px
+.contact-map
+	position: relative
+	border 1px solid #ccc
+	max-width: 500px
+	height: 326px
+	overflow: hidden
+	margin 20px auto 0
+	+above($screen-sm)
+		margin: 0
+	#map
+		background-color: gray
+		position: absolute
+		top 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.faq
+	padding 30px 0 40px
+	counter-increment 1
+	counter-reset counter
+.faq-block
+	padding 6px 0
+	line-height: 1.5
+	+above($screen-sm)
+		position: relative
+		padding-left: 50px
+		counter-increment counter
+		&:before
+			content counter(counter)
+			position: absolute
+			left: 0
+			top 24px
+			width: 30px
+			height: 30px
+			line-height: 28px
+			text-align: center
+			border 1px solid #1e5587
+			color $blue
+	h2
+		text-transform: uppercase
+		font-weight: 400
+		font-size: 1.2rem
+		color $blue
+
+.check-list
+	padding: 0
+	list-style none
+	li
+		position: relative
+		padding-left: 30px
+		margin 10px 0
+		&:before
+			content ''
+			width: 18px
+			height: 18px
+			background: url("../images/check-list.png") no-repeat
+			padding-left: 26px
+			position: absolute
+			top 50%
+			left: 0
+			margin-top: -9px
+
+.highlight-block
+	color #1ca8e1
+	font-style: italic
+	font-size: 1.2rem
+	padding 10px
+	background-color: #efeff0
+	margin 40px 0 20px
+	position: relative
+	+above($screen-sm)
+		background: url(../images/quotes-bg.jpg) no-repeat center / cover
+		padding 50px 40px
+		font-size 1.714rem
+		span
+			position: relative
+			z-index: 1
+		&:before, &:after
+			content ''
+			width: 53px
+			height: 44px
+			top 35px
+			left: 35px
+			background-image: url(../images/quote-up.png)
+			position: absolute
+		&:after
+			top auto
+			left auto
+			right 35px
+			bottom 35px
+			background-image: url(../images/quote-down.png)
+
+.link-return
+	float: right
+	color #1e5587
+
+
+.news-page
+	padding 30px 0 40px
+	.container > h2
+		font-size: 1.7rem
+		text-transform: uppercase
+		font-weight: 400
+		color $blue
+.news-block
+	clearfix()
+	line-height: 1.5
+	padding 32px 0 30px
+	h3
+		font-size 1.286rem
+		text-transform: uppercase
+		color $blue
+		font-weight: 400
+	+above($screen-sm)
+		.btn
+			float: right
+			margin-top: 30px
+	&:nth-child(2n)
+		background-color: #efeff0
+	aside
+		position: relative
+		display: inline-block
+		max-width: 390px
+		margin: 0 auto
+		.date
+			width: 220px
+			height: 150px
+			background: url(../images/corner.png) no-repeat
+			right 0
+			top 0
+			position: absolute
+		.date-num
+			position: absolute
+			font-size: 3.7rem
+			text-transform: uppercase
+			line-height: 0.35
+			color #c7c7c7
+			right 20px
+			top 4px
+			scandal()
+		.date-month
+			scandal()
+			font-size: 1.1rem
+			line-height: 1.2
+			position: absolute
+			right 12px
+			top 24px
+			text-transform: uppercase
+			z-index: 1
+			color $blue
+		+above($screen-sm)
+			margin-right: 43px
+			float: left
+
+.pagination
+	text-align: center
+	margin-top: 20px
+	a
+		text-decoration: none
+		vertical-align: top
+		display: inline-block
+	.disabled
+		pointer-events none
+		svg
+			fill #144b7b
+	svg
+		fill #c6c6c6
+	.arr-left
+		margin-right: 6px
+	.arr-right
+		margin-left: 6px
+	a:not(.arr), span
+		transition all 0.3s
+		font-size 0.8rem
+		color #c6c6c6
+		width: 25px
+		text-decoration: none
+		line-height: 25px
+		height: 25px
+		display: inline-block
+		vertical-align: middle
+		background-color: #efeff0
+		margin 0 1px
+	span
+		background linear-gradient(to bottom, #55bbe6 0%, #55bbe6 50%, #4dabd2 50%, #4dabd2 100%)
+		color white
+	a:not(.arr):hover
+		background-color: gray
+	+above($screen-sm)
+		float: right

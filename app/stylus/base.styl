@@ -176,9 +176,11 @@ img
     padding-left: 20px
     padding-right: 50px
     margin: 0 auto
-    background-color: #fdfcfc
+    background-color: white
     color $blue
     border: 1px solid #dfdfdf
+    &::placeholder
+        text-transform: uppercase
     &-text
         resize none
         height: 100px
@@ -186,6 +188,12 @@ img
     &:focus
         border-color: gray
         outline none
+    svg
+        position: absolute
+        right 10px
+        top 50%
+        transform translateY(-50%)
+
 
 .field-wrap-transparent
     display: block
@@ -206,6 +214,18 @@ img
         top 50%
         transform translateY(-50%)
 
+.field-wrap
+    position: relative
+    margin 10px 0
+    svg
+        position: absolute
+        right 10px
+        top 50%
+        transform translateY(-50%)
+    &-text
+        svg
+            top 12px
+            transform none
 .form-group
     margin 20px 0
     +above($screen-sm)
@@ -312,8 +332,25 @@ svg {
     fill: #2b5f8e;
     vertical-align: middle
 }
+
 .icon-user {
     width: 22px;
     height: 22px;
+    fill $blue
+}
+
+.icon-chevron-left, .icon-chevron-right {
+    width: 25px;
+    height: 25px;
+    fill $gray
+}
+.icon-home, .icon-clock {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-mail {
+    width: 24px
+    height: 24px
     fill $blue
 }

@@ -10,6 +10,10 @@
   width: 32em;
   height: 32em;
 }
+.icon-clock {
+  width: 32em;
+  height: 32em;
+}
 .icon-copyright {
   width: 18.452em;
   height: 18.452em;
@@ -26,6 +30,10 @@
   width: 32em;
   height: 32em;
 }
+.icon-home {
+  width: 32em;
+  height: 32em;
+}
 .icon-inclined-pendrive {
   width: 30.249em;
   height: 30.249em;
@@ -37,6 +45,14 @@
 .icon-law-book {
   width: 32em;
   height: 32em;
+}
+.icon-left-chevron {
+  width: 28.438em;
+  height: 28.438em;
+}
+.icon-mail {
+  width: 3.689em;
+  height: 3.689em;
 }
 .icon-operator {
   width: 32em;
@@ -61,6 +77,10 @@
 .icon-police {
   width: 32em;
   height: 32em;
+}
+.icon-right-chevron {
+  width: 28.438em;
+  height: 28.438em;
 }
 .icon-shield {
   width: 31.375em;
